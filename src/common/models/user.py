@@ -5,8 +5,11 @@ from common.models.entity import Entity, EntityUserManager
 
 
 class ExtendedUser(Entity, AbstractUser):
-
     objects = EntityUserManager()
+
+    def save(self, *args, **kwargs):
+        self.email = self.username
+        return super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = _('User')
