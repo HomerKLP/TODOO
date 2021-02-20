@@ -10,7 +10,8 @@ SIDE_APPS = (
     'rest_framework.authtoken',
 )
 
-PROJECT_APPS = ('common',)
+PROJECT_APPS = ('common', 'todoo')
+
 message = 'no more than 5 apps per django project'
 assert len(PROJECT_APPS) <= 5, message  # nosec
 DEFAULT_APPS = DJANGO_APPS + SIDE_APPS + PROJECT_APPS
