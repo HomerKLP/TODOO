@@ -1,5 +1,3 @@
-from uuid import uuid4
-
 from django.contrib.auth.models import UserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -20,9 +18,6 @@ class EntityUserManager(UserManager):
 
 
 class Entity(models.Model):
-    uuid = models.UUIDField(
-        primary_key=True, verbose_name=_('uuid'), default=uuid4,
-    )
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name=_('created_at'),
     )

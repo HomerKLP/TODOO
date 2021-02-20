@@ -6,3 +6,4 @@ omit =
     core/gunicorn.py
     core/celery.py
     ../*migrations*
+    */apps.py

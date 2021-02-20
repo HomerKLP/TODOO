@@ -15,6 +15,7 @@ urlpatterns += (
         view=schema_view.with_ui('redoc', cache_timeout=0),
     ),
     path(route='api/', view=include(arg='common.urls')),
+    path(route='api/', view=include(arg='todoo.urls')),
 )
 
 if DEBUG:
