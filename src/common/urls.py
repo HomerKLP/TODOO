@@ -1,6 +1,6 @@
 from rest_framework.routers import DefaultRouter
 
-from common.views.user import ObtainTokenView
+from common.views import ObtainTokenView
 
 router = DefaultRouter()
 router.register(

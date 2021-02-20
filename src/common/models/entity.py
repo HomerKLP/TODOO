@@ -21,7 +21,7 @@ class EntityUserManager(UserManager):
 
 class Entity(models.Model):
     uuid = models.UUIDField(
-        primary_key=True, verbose_name=_('uuid'), default=uuid4
+        primary_key=True, verbose_name=_('uuid'), default=uuid4,
     )
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name=_('created_at'),

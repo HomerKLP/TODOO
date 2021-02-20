@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 
-from common.serializers.user import ObtainTokenSerializer
+from common.serializers import ObtainTokenSerializer
 
 
 class ObtainTokenView(ModelViewSet):
