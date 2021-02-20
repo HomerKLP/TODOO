@@ -1,4 +1,4 @@
-# Base Project for starting all Django projects
+# Python Backend TODO App ready for Production
 
 ## Development:
 
