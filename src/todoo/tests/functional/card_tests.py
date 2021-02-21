@@ -49,7 +49,5 @@ class TestCard:
     ):
         path = reverse(viewname='cards-list')
         response = authorized_client.get(path=path)
-        import json
-        print(json.dumps(response.json(), indent=4, ensure_ascii=False))
         assert response.status_code == 200
         assert len(response.json()['results']) > 0
