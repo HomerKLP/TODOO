@@ -16,3 +16,4 @@ pyjwt==2.0.1
 requests==2.25.1
 sentry-sdk==0.19.5
 drf-yasg==1.20.0
+cryptography==3.4.6

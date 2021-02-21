@@ -30,7 +30,6 @@ class TestCard:
         response = authorized_client.put(
             path=path, data=data, content_type='application/json'
         )
-        print(response.json())
         assert response.status_code == 200
         card.refresh_from_db()
         assert card.name == data['name']

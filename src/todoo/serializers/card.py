@@ -6,6 +6,7 @@ from .category import CategorySerializer
 
 class ListCardSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
+    name = serializers.CharField()
 
     class Meta:
         model = Card
@@ -17,6 +18,7 @@ class CreateCardSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(
         default=serializers.CurrentUserDefault()
     )
+    name = serializers.CharField()
 
     class Meta:
         model = Card
@@ -27,6 +29,7 @@ class UpdateCardSerializer(serializers.ModelSerializer):
     category = serializers.PrimaryKeyRelatedField(
         required=False, queryset=Category.objects.all(), allow_null=False,
     )
+    name = serializers.CharField()
 
     class Meta:
         model = Card
