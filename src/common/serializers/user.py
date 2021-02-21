@@ -6,7 +6,7 @@ from rest_framework.exceptions import AuthenticationFailed
 
 
 class ObtainTokenSerializer(serializers.ModelSerializer):
-    username = serializers.EmailField(
+    username = serializers.CharField(
         write_only=True, max_length=64,
     )
     password = serializers.CharField(

@@ -12,7 +12,7 @@ class Card(Entity):
         primary_key=True, verbose_name=_('uuid'), default=uuid4,
     )
     _name = models.TextField(
-        verbose_name=_('name'),
+        verbose_name=_('name'), editable=False,
     )
     user = models.ForeignKey(
         to='common.ExtendedUser', verbose_name=_('user'),
