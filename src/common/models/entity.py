@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 
 class EntityManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(  # pragma: no cover
+        return super().get_queryset().filter(
             is_deleted=False
         )
 
@@ -19,7 +19,7 @@ class EntityUserManager(UserManager):
 
 class Entity(models.Model):
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name=_('created_at'),
+        auto_now_add=True, verbose_name=_('created_at'), db_index=True,
     )
     modified_at = models.DateTimeField(
         auto_now=True, verbose_name=_('modified_at'),

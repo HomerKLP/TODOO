@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 
-from todoo.models import Category
-from todoo.serializers import CategorySerializer
+from ..models import Category
+from ..serializers import CategorySerializer
 
 
 class CategoryView(ModelViewSet):
