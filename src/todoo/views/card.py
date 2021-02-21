@@ -11,7 +11,9 @@ class CardView(ModelViewSet):
     list_serializer_class = ListCardSerializer
     create_serializer_class = CreateCardSerializer
     update_serialzier_class = UpdateCardSerializer
-    queryset = Card.objects.all().order_by('-created_at')
+    queryset = Card.objects.all().order_by(
+        '-created_at'
+    ).select_related('category')
 
     def get_queryset(self):
         user = self.request.user
